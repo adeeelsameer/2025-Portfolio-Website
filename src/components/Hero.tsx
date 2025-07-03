@@ -68,8 +68,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
           >
-            Crafting innovative digital experiences with cutting-edge technology. 
-            Passionate about building products that make a difference.
+            Advancing technology with a focus on AI, robotics, automation, and creating products that solve real-world challenges.
           </motion.p>
         </motion.div>
 
@@ -87,9 +86,12 @@ const Hero = () => {
         }}>   
             View My Work
           </button>
-          <button className="px-8 py-4 bg-glass-card border border-primary/30 rounded-xl hover:bg-primary/10 transition-all duration-300">
+          <a
+            href="Muhammad Adil Sameer - 2025 June with COOP-12.pdf"  // or your actual file name
+            download 
+            className="px-8 py-4 bg-glass-card border border-primary/30 rounded-xl hover:bg-primary/10 transition-all duration-300">
             Download Resume
-          </button>
+            </a>
         </motion.div>
       </div>
 

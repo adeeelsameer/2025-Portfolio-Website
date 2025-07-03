@@ -4,51 +4,74 @@ import { Code2, Database, Cloud, Smartphone, Palette, Zap } from "lucide-react";
 const Skills = () => {
   const skillCategories = [
     {
-      icon: Code2,
-      title: "Frontend Development",
-      skills: [
-        { name: "React/Next.js", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Tailwind CSS", level: 88 },
-        { name: "Vue.js", level: 75 }
-      ]
+        icon: Code2,
+        title: "Frontend Development",
+        skills: [
+        { name: "React.js", level: 90 },
+        { name: "Next.js", level: 90},
+        { name: "Figma", level: 80 },
+
+        { name: "TypeScript", level: 80 },
+        { name: "JavaScript", level: 90 },
+        { name: "HTML/CSS", level: 90 }
+        ]
     },
     {
-      icon: Database,
-      title: "Backend Development",
-      skills: [
-        { name: "Node.js", level: 92 },
-        { name: "Python", level: 85 },
-        { name: "PostgreSQL", level: 88 },
-        { name: "GraphQL", level: 80 }
-      ]
+        icon: Database,
+        title: "Backend & Database",
+        skills: [
+        { name: "Python", level: 95 },
+        { name: "Java", level: 90 },
+        { name: "Flask", level: 80 },
+        { name: "SQL / MySQL", level: 80 },
+        { name: "MongoDB", level: 75 }
+        ]
     },
     {
-      icon: Cloud,
-      title: "Cloud & DevOps",
-      skills: [
-        { name: "AWS", level: 85 },
-        { name: "Docker", level: 82 },
-        { name: "Kubernetes", level: 75 },
-        { name: "CI/CD", level: 88 }
-      ]
+        icon: Cloud,
+        title: "Cloud & DevOps",
+        skills: [
+        { name: "Docker", level: 80 },
+        { name: "Google Cloud Platform (GCP)", level: 75 },
+        { name: "Git", level: 100 }
+        ]
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
-      skills: [
-        { name: "React Native", level: 80 },
-        { name: "Flutter", level: 70 },
-        { name: "iOS Development", level: 65 },
-        { name: "PWA", level: 85 }
-      ]
+        icon: Code2,
+        title: "Other Languages & Tools",
+        skills: [
+        { name: "C++ / C", level: 80 },
+        { name: "Visual Basic", level: 65 },
+        { name: "Racket", level: 90 },
+        { name: "Assembly", level: 75 },
+        { name: "Jupyter Notebook", level: 75 },
+        ]
     }
-  ];
+    ];
+
 
   const tools = [
-    "VS Code", "Git", "Figma", "Postman", "MongoDB", "Redis", 
-    "Jenkins", "Terraform", "Jest", "Cypress", "Webpack", "Vite"
-  ];
+    "LangChain",
+    "VS Code",
+    "ChromaDB",
+    "REST APIs",
+    "Git",
+    "n8n",
+    "Stripe",
+    "Clerk",
+    "OpenAI",
+    "OAuth",
+    "Vercel",
+    "Firebase",
+    "Figma",
+    "Jupyter Notebook",
+    "MongoDB",
+    "Docker",
+    "Google Cloud Platform"
+    ];
+
+    const certifications = ["Responsive Web Design", "Systematic Program Design", "Software Construction"];
+
 
   return (
     <section className="py-20 px-4 bg-subtle-pattern" id="skills">
@@ -161,11 +184,7 @@ const Skills = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[
-              "AWS Certified Solutions Architect",
-              "Google Cloud Professional Developer",
-              "Certified Kubernetes Administrator"
-            ].map((cert, index) => (
+            {certifications.map((cert, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}

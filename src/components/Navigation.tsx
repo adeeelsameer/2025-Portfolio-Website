@@ -44,11 +44,15 @@ const Navigation = () => {
 
   const scrollToSection = (href: string) => {
     const element = document.getElementById(href.substring(1));
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (window.innerWidth < 768) {
+        setIsOpen(false);
+        setTimeout(() => {
+        if (element) element.scrollIntoView({ behavior: "smooth" });
+        }, 300);
+    } else {
+        if (element) element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsOpen(false);
-  };
+};
 
   return (
     <motion.nav
@@ -61,8 +65,10 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
+            style={{ cursor: "pointer" }}
           >
             Muhammad Adil Sameer
           </motion.div>

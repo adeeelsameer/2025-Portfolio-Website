@@ -30,17 +30,12 @@ const Contact = () => {
       value: "adil.fall2023@gmail.com",
       href: "mailto:adil.fall2023@gmail.com"
     },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 (236) 865-8948",
-      href: "tel:+12368658948"
-    },
+
     {
       icon: MapPin,
       label: "Location",
       value: "Vancouver, BC, Canada",
-    href: "https://www.google.com/maps/place/Vancouver,+BC,+Canada"
+      href: "https://www.google.com/maps/place/Vancouver,+BC,+Canada"
     }
   ];
 
@@ -181,6 +176,7 @@ const Contact = () => {
                   <motion.a
                     key={index}
                     href={info.href}
+                    target="_blank"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
