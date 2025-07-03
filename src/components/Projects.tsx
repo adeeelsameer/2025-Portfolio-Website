@@ -63,10 +63,10 @@ const Projects = () => {
     <section className="py-20 px-4" id="projects">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
@@ -81,10 +81,14 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 80, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ 
+                duration: 1, 
+                delay: index * 0.15,
+                ease: "easeOut"
+              }}
+              viewport={{ once: true, margin: "-50px" }}
               className={`group relative bg-glass-card border border-primary/20 rounded-xl overflow-hidden hover:shadow-glow transition-all duration-500 ${
                 project.featured ? 'md:col-span-2 lg:col-span-1' : ''
               }`}

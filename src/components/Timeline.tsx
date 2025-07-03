@@ -45,10 +45,10 @@ const Timeline = () => {
     <section className="py-20 px-4 bg-subtle-pattern" id="experience">
       <div className="max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
@@ -66,10 +66,14 @@ const Timeline = () => {
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: 100, scale: 0.8 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ 
+                duration: 1, 
+                delay: index * 0.2,
+                ease: "easeOut"
+              }}
+              viewport={{ once: true, margin: "-50px" }}
               className="relative mb-12 ml-20"
             >
               {/* Timeline dot */}
