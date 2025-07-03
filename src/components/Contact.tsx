@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MessageCircle, Send, MapPin, Phone, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, MessageCircle, Send, MapPin, Phone, Linkedin, Github, Twitter, Instagram } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -27,27 +27,27 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "alex.johnson@email.com",
-      href: "mailto:alex.johnson@email.com"
+      value: "adil.fall2023@gmail.com",
+      href: "mailto:adil.fall2023@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+1 (236) 865-8948",
+      href: "tel:+12368658948"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
-      href: "#"
+      value: "Vancouver, BC, Canada",
+    href: "https://www.google.com/maps/place/Vancouver,+BC,+Canada"
     }
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Twitter, href: "#", label: "Twitter" }
+    { icon: Linkedin, href: "https://www.linkedin.com/in/muhammad-adil-sameer/", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/adeeelsameer", label: "GitHub" },
+    { icon: Instagram, href: "https://www.instagram.com/adeeelsameer", label: "Instagram" }
   ];
 
   return (
@@ -209,6 +209,7 @@ const Contact = () => {
                   <motion.a
                     key={index}
                     href={social.href}
+                    target="_blank"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
