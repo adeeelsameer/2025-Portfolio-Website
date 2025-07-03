@@ -48,7 +48,7 @@ const Hero = () => {
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Alex Johnson
+            Muhammad Adil Sameer
           </motion.h1>
           
           <motion.div
@@ -58,7 +58,7 @@ const Hero = () => {
             transition={{ delay: 0.6 }}
           >
             <span className="bg-glass-card px-4 py-2 rounded-full border border-primary/20">
-              Software Engineer | Product Builder
+              Software Engineer
             </span>
           </motion.div>
 
@@ -80,7 +80,11 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
         >
-          <button className="px-8 py-4 bg-gradient-primary text-white rounded-xl hover:shadow-glow transition-all duration-300 hover:scale-105">
+          <button className="px-8 py-4 bg-gradient-primary text-white rounded-xl hover:shadow-glow transition-all duration-300 hover:scale-105"
+          onClick={() => {
+            const section = document.getElementById('about');
+            if (section) section.scrollIntoView({ behavior: 'smooth' });
+        }}>   
             View My Work
           </button>
           <button className="px-8 py-4 bg-glass-card border border-primary/30 rounded-xl hover:bg-primary/10 transition-all duration-300">

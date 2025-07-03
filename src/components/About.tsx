@@ -4,24 +4,24 @@ import { Code2, Rocket, Users, Award } from "lucide-react";
 const About = () => {
   const highlights = [
     {
-      icon: Code2,
-      title: "5+ Years Experience",
-      description: "Full-stack development with modern technologies"
+    icon: Rocket,
+    title: "AI Innovator",
+    description: "Built AI apps and automations"
     },
     {
-      icon: Rocket,
-      title: "20+ Projects Delivered",
-      description: "From startups to enterprise solutions"
+        icon: Code2,
+        title: "Full-Stack Skills",
+        description: "React, Next.js, Flask, Python"
     },
     {
-      icon: Users,
-      title: "Team Leadership",
-      description: "Led cross-functional teams of 8+ developers"
+        icon: Users,
+        title: "Multi-Domain Experience",
+        description: "AI, robotics, VC tech, SaaS"
     },
     {
-      icon: Award,
-      title: "Industry Recognition",
-      description: "Winner of 3 hackathons and innovation awards"
+        icon: Award,
+        title: "Hackathons",
+        description: "Projects with real-world impact"
     }
   ];
 
@@ -39,8 +39,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Passionate software engineer with a track record of building scalable applications 
-            and leading high-performing teams.
+            Software engineer passionate about AI, robotics, and automation. Skilled at building scalable solutions and collaborating in high-performing teams.
           </p>
         </motion.div>
 
@@ -55,9 +54,11 @@ const About = () => {
           >
             <div className="relative bg-glass-card rounded-2xl p-8 border border-primary/20">
               <div className="w-64 h-64 mx-auto bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center">
-                <div className="w-48 h-48 bg-muted rounded-full flex items-center justify-center text-4xl font-bold text-muted-foreground">
-                  AJ
-                </div>
+                <img
+                className="w-64 h-64 rounded-full object-cover border-4 border-white shadow-lg"
+                src="/images/muhammad-adil-sameer-pfp.jpg"
+                alt="Muhammad Adil Sameer"
+                />
               </div>
               {/* Floating elements */}
               <motion.div

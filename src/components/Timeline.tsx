@@ -4,41 +4,80 @@ import { Calendar, MapPin, ExternalLink } from "lucide-react";
 const Timeline = () => {
   const experiences = [
     {
-      company: "TechCorp Inc.",
-      role: "Senior Software Engineer",
-      duration: "2022 - Present",
-      location: "San Francisco, CA",
-      description: "Led development of microservices architecture serving 2M+ users. Reduced system latency by 40% and improved code coverage to 95%.",
-      logo: "TC",
-      achievements: ["Led team of 8 developers", "Architected scalable systems", "Mentored junior developers"]
+    company: "Icon Ventures",
+    role: "Software Engineering Intern",
+    duration: "June 2025 - Present",
+    location: "Palo Alto, CA, USA (Remote)",
+    logo: "IV",
+    description: "Building AI-driven automations using n8n, integrating LLMs and APIs to reduce manual VC research time.",
+    achievements: [
+        "n8n",
+        "JavaScript",
+        "Python",
+        "Automation development",
+        "LLM integration",
+        "API integration",
+    ]
     },
     {
-      company: "Innovation Labs",
-      role: "Full Stack Developer",
-      duration: "2020 - 2022",
-      location: "Austin, TX",
-      description: "Built end-to-end web applications using React, Node.js, and AWS. Delivered 15+ projects on time and under budget.",
-      logo: "IL",
-      achievements: ["Full-stack development", "AWS cloud deployment", "Agile methodology"]
+    company: "Real Life Robotics",
+    role: "Robot Guide",
+    duration: "June 2025 - Present",
+    location: "Markham, ON, Canada",
+    logo: "RL",
+    description: "Ensured reliable robot navigation and reported technical issues to engineering teams, helping optimize delivery routes.",
+    achievements: [
+        "Robotics",
+        "Troubleshooting",
+        "Incident triage",
+        "Operational feedback"
+    ]
     },
     {
-      company: "StartupXYZ",
-      role: "Frontend Developer",
-      duration: "2019 - 2020",
-      location: "Remote",
-      description: "Developed responsive web applications and improved user engagement by 60% through UI/UX optimizations.",
-      logo: "SX",
-      achievements: ["React development", "UI/UX optimization", "Performance tuning"]
+    company: "Mannai Infotech",
+    role: "Software Engineering Intern",
+    duration: "May 2025 - June 2025",
+    location: "Doha, Qatar",
+    logo: "MI",
+    description: "Developed a Retrieval-Augmented Generation app for automating RFP document review using React, Flask, and OpenAI tools.",
+    achievements: [
+        "React.js",
+        "Flask",
+        "LangChain",
+        "ChromaDB",
+        "Docker",
+        "Google Cloud Platform"
+    ]
     },
     {
-      company: "Digital Agency",
-      role: "Junior Developer",
-      duration: "2018 - 2019",
-      location: "New York, NY",
-      description: "Started my journey in web development, working on client projects and learning modern development practices.",
-      logo: "DA",
-      achievements: ["JavaScript fundamentals", "Client communication", "Code reviews"]
+    company: "Visual Cognition Lab, UBC",
+    role: "Software Developer",
+    duration: "January 2025 - May 2025",
+    location: "Vancouver, BC, Canada",
+    logo: "VC",
+    description: "Maintained and improved the research lab website with modern web technologies.",
+    achievements: [
+        "React.js",
+        "TypeScript",
+        "Express.js",
+        "MongoDB"
+    ]
+    },
+    {
+    company: "Data Science Club, UBC",
+    role: "UI/UX Developer",
+    duration: "Oct 2024 - May 2025",
+    location: "Vancouver, BC, Canada",
+    logo: "DS",
+    description: "Designed and developed project showcase sites for club members using modern web tools.",
+    achievements: [
+        "UI/UX Design",
+        "Figma",
+        "React.js",
+        "JavaScript"
+    ]
     }
+
   ];
 
   return (

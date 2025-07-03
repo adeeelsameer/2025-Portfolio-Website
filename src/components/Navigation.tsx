@@ -64,7 +64,7 @@ const Navigation = () => {
             className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
-            Alex Johnson
+            Muhammad Adil Sameer
           </motion.div>
 
           {/* Desktop Navigation */}
