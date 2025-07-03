@@ -61,7 +61,11 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'primary-glow': 'hsl(var(--primary-glow))',
+				'accent-glow': 'hsl(var(--accent-glow))',
+				'glass-bg': 'hsl(var(--glass-bg))',
+				'glass-border': 'hsl(var(--glass-border))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
