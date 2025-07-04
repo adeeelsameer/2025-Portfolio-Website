@@ -15,13 +15,27 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setFormData({ name: "", email: "", subject: "", message: "" });
-  };
+
+    try {
+        const res = await fetch("http://localhost:8888/api/send-email", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+            });
+
+            if (res.ok) {
+            setFormData({ name: "", email: "", subject: "", message: "" });
+            alert("Message sent!");
+            } else {
+            alert("Failed to send message. Please try again later.");
+            }
+        } catch (err) {
+            alert("Error: " + (err as Error).message);
+        }
+
+        setIsSubmitting(false);
+    };
+
 
   const contactInfo = [
     {
