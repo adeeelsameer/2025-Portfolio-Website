@@ -37,11 +37,6 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle("dark");
-  };
-
   const scrollToSection = (href: string) => {
     const element = document.getElementById(href.substring(1));
     if (window.innerWidth < 768) {
@@ -90,29 +85,11 @@ const Navigation = () => {
                 {item.name}
               </motion.button>
             ))}
-            
-            {/* Theme Toggle */}
-            <motion.button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-primary/20 text-primary hover:bg-primary/30 transition-colors duration-200"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </motion.button>
-          </div>
+                      </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
-            <motion.button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-primary/20 text-primary"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </motion.button>
-            
+
             <motion.button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg bg-primary/20 text-primary"
