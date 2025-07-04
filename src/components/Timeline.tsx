@@ -25,7 +25,7 @@ const Timeline = () => {
     duration: "June 2025 - Present",
     location: "Markham, ON, Canada",
     logo: "RL",
-    description: "Ensured reliable robot navigation and reported technical issues to engineering teams, helping optimize delivery routes.",
+    description: "Ensuring reliable robot navigation and reported technical issues to engineering teams, helping optimize delivery routes.",
     achievements: [
         "Robotics",
         "Troubleshooting",

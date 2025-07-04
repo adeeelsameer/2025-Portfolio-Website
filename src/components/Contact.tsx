@@ -191,6 +191,7 @@ const Contact = () => {
                     key={index}
                     href={info.href}
                     target="_blank"
+                    rel="noopener noreferrer"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -220,6 +221,7 @@ const Contact = () => {
                     key={index}
                     href={social.href}
                     target="_blank"
+                    rel="noopener noreferrer"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -242,10 +244,9 @@ const Contact = () => {
               viewport={{ once: true }}
               className="bg-gradient-primary rounded-xl p-6 text-white"
             >
-              <h4 className="text-lg font-bold mb-2">Quick Response</h4>
+              <h4 className="text-lg font-bold mb-2">Connect with me!</h4>
               <p className="text-white/90 text-sm">
-                I typically respond within 24 hours. For urgent matters, 
-                feel free to call me directly.
+                Let’s chat about tech, projects, or opportunities!
               </p>
             </motion.div>
           </motion.div>

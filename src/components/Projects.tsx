@@ -4,60 +4,61 @@ import { ExternalLink, Github, Zap } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features real-time inventory, payment processing, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-      github: "#",
-      live: "#",
-      featured: true
+        title: "RFP Analyzer",
+        description: "Automated RAG app for summarizing and searching 200+ page RFP documents. Built with React, Flask, and LangChain, leveraging OpenAI embeddings and ChromaDB for semantic search. Dockerized and deployed on GCP.",
+        image: "/images/projects/RAG.jpg",
+        tech: ["React.js", "Flask", "LangChain", "OpenAI", "ChromaDB", "Docker", "Google Cloud Platform"],
+        github: "https://github.com/adeeelsameer/RFP-AI-Reader",
+        live: null,
+        featured: true
     },
     {
-      title: "AI Task Manager",
-      description: "Smart productivity app with AI-powered task prioritization, natural language processing, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      tech: ["Next.js", "OpenAI", "Prisma", "TypeScript", "Vercel"],
-      github: "#",
-      live: "#",
-      featured: true
+        title: "Flashify.AI",
+        description: "Flashcard SaaS webapp developed with Next.js and Material-UI, featuring AI-powered flashcard creation, real-time data via Firebase, and secure authentication/payments using Clerk and Stripe.",
+        image: "/images/projects/flashify.png",
+        tech: ["Next.js", "Material-UI", "OpenAI", "Firebase", "Clerk", "Stripe"],
+        github: "https://github.com/adeeelsameer/Flashcards-App",
+        live: "https://flashcards-zeta-ten.vercel.app",
+        featured: true
     },
     {
-      title: "Real-time Chat App",
-      description: "WebSocket-based chat application with file sharing, emoji reactions, and room management. Supports 1000+ concurrent users.",
-      image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&h=400&fit=crop",
-      tech: ["Socket.io", "Express", "MongoDB", "Redis", "Docker"],
-      github: "#",
-      live: "#",
-      featured: false
+        title: "SmartReply AI",
+        description: "Automated AI-driven email responder built in under 24 hours for nwHacks 2025. Features secure real-time inbox display with Gmail API and instant AI-powered reply generation via OpenAI.",
+        image: "/images/projects/smartreply.webp",
+        tech: ["Ionic React", "TypeScript", "OpenAI", "Gmail API", "OAuth 2.0"],
+        github: "https://github.com/adeeelsameer/nwhacks-email-responder",
+        live: null,
+        featured: true
     },
     {
-      title: "Data Visualization Dashboard",
-      description: "Interactive analytics dashboard with real-time data processing, custom charts, and automated reporting features.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      tech: ["D3.js", "React", "Python", "FastAPI", "Kafka"],
-      github: "#",
-      live: "#",
-      featured: false
+        title: "Library Management System",
+        description: "GUI-based library system built in Java and Swing, supporting book management, borrowing, ratings, and persistent data via JSON. Developed for UBC course project, with extensive unit testing.",
+        image: "/images/projects/library-management.avif",
+        tech: ["Java", "Swing", "JUnit", "OOP", "JSON"],
+        github: "https://github.com/adeeelsameer/Library-Management-System", // Replace with actual repo link
+        live: null,
+        featured: false
     },
     {
-      title: "Mobile Fitness Tracker",
-      description: "Cross-platform mobile app for workout tracking, nutrition monitoring, and social fitness challenges.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
-      tech: ["React Native", "GraphQL", "Apollo", "Firebase"],
-      github: "#",
-      live: "#",
-      featured: false
+        title: "Predicting Heart Disease",
+        description: "Machine learning project using R to predict heart disease risk from anonymized patient data. Achieved 70% accuracy, 67.4% recall, and 68.9% precision. End-to-end analysis in Jupyter Notebook.",
+        image: "/images/projects/predicting-heart-disease.jpg",
+        tech: ["R", "Jupyter Notebook", "Machine Learning", "Data Analysis"],
+        github: "https://github.com/adeeelsameer/Predicting-Heart-Disease", // Replace with actual repo link
+        live: null,
+        featured: false
     },
     {
-      title: "Blockchain Voting System",
-      description: "Secure voting platform using blockchain technology to ensure transparency and immutability of election results.",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop",
-      tech: ["Solidity", "Web3.js", "React", "Ethereum", "IPFS"],
-      github: "#",
-      live: "#",
-      featured: false
+        title: "Personal Portfolio",
+        description: "My personal portfolio website showcasing my projects, skills, and experience. Built with React, Express, Tailwind CSS, and Lovable featuring a responsive design and smooth animations.",
+        image: "/images/projects/personal-portfolio.png",
+        tech: ["React.js", "Express.js", "TypeScript", "Lovable", "UI/UX"],
+        github: "https://github.com/adeeelsameer/2025-Portfolio-Website",
+        live: null,
+        featured: false
     }
-  ];
+    ];
+
 
   return (
     <section className="py-20 px-4" id="projects">
@@ -111,22 +112,29 @@ const Projects = () => {
                 {/* Hover overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex gap-4">
-                    <motion.a
-                      href={project.github}
-                      className="p-3 bg-glass-card border border-primary/30 rounded-full hover:bg-primary/20 transition-colors duration-200"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Github className="w-5 h-5 text-primary" />
-                    </motion.a>
-                    <motion.a
-                      href={project.live}
-                      className="p-3 bg-glass-card border border-primary/30 rounded-full hover:bg-primary/20 transition-colors duration-200"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <ExternalLink className="w-5 h-5 text-primary" />
-                    </motion.a>
+                    {project.github && (
+                        <motion.a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-3 bg-glass-card border border-primary/30 rounded-full hover:bg-primary/20 transition-colors duration-200"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                        <Github className="w-5 h-5 text-primary" />
+                        </motion.a>
+                    )}
+                    {project.live && (
+                        <motion.a
+                            href={project.live}
+                            target="_blank"
+                            className="p-3 bg-glass-card border border-primary/30 rounded-full hover:bg-primary/20 transition-colors duration-200"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                        <ExternalLink className="w-5 h-5 text-primary" />
+                        </motion.a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -154,19 +162,21 @@ const Projects = () => {
 
         {/* View All Projects Button */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
         >
-          <motion.button
+          <motion.a
             className="px-8 py-4 bg-gradient-primary text-white rounded-xl hover:shadow-glow transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            href="https://github.com/adeeelsameer"
+            target="_blank"
           >
             View All Projects
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>
