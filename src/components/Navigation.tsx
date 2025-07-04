@@ -5,7 +5,7 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -16,9 +16,9 @@ const Navigation = () => {
     { name: "Contact", href: "#contact" }
   ];
 
-  // Initialize dark mode on mount
+  // Start in light mode by default
   useEffect(() => {
-    document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("dark");
   }, []);
 
   useEffect(() => {
