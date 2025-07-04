@@ -5,7 +5,7 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -15,11 +15,6 @@ const Navigation = () => {
     { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" }
   ];
-
-  // Start in light mode by default
-  useEffect(() => {
-    document.documentElement.classList.remove("dark");
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,14 +38,8 @@ const Navigation = () => {
   }, []);
 
   const toggleTheme = () => {
-    const newDarkMode = !isDark;
-    setIsDark(newDarkMode);
-    
-    if (newDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    setIsDark(!isDark);
+    document.documentElement.classList.toggle("dark");
   };
 
   const scrollToSection = (href: string) => {
