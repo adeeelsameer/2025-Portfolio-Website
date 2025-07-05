@@ -17,7 +17,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-        const res = await fetch("http://localhost:8888/api/send-email", {
+        const res = await fetch("https://two025-portfolio-website.onrender.com/api/send-email", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
