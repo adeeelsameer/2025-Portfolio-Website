@@ -5,9 +5,13 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const app = express();
-const PORT = 8888;
+const PORT = process.env.PORT || 8888;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [process.env.CLIENT_URL, "http://localhost:8080"],
+  })
+);
 app.use(bodyParser.json());
 
 app.post("/api/send-email", async (req, res) => {
@@ -38,7 +42,9 @@ app.post("/api/send-email", async (req, res) => {
     res.status(200).json({ message: "Email sent successfully!" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Failed to send email.", error: error.message });
+    res
+      .status(500)
+      .json({ message: "Failed to send email.", error: error.message });
   }
 });
 
