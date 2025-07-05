@@ -86,7 +86,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`group relative bg-glass-card border border-primary/20 rounded-xl overflow-hidden hover:shadow-glow transition-all duration-500 ${
+              className={`group relative bg-glass-card border border-primary/20 rounded-xl overflow-hidden hover:shadow-glow transition-shadow duration-500 ${
                 project.featured ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
             >
