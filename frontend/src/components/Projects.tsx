@@ -52,7 +52,7 @@ const Projects = () => {
         title: "Personal Portfolio",
         description: "My personal portfolio website showcasing my projects, skills, and experience. Built with React, Express, Tailwind CSS, and Lovable featuring a responsive design and smooth animations.",
         image: "/images/projects/personal-portfolio.png",
-        tech: ["React.js", "Express.js", "TypeScript", "Lovable", "UI/UX"],
+        tech: ["React.js", "Express.js", "TypeScript", "Lovable", "Tailwind CSS", "UI/UX"],
         github: "https://github.com/adeeelsameer/2025-Portfolio-Website",
         live: null,
         featured: false
