@@ -109,7 +109,7 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 bg-muted/50 border border-primary/30 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200"
+                    className="w-full px-4 py-3 bg-muted/50 border border-primary/30 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors duration-200"
                     placeholder="Your name"
                   />
                 </motion.div>
@@ -165,7 +165,7 @@ const Contact = () => {
                 disabled={isSubmitting || isSent}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-primary text-white rounded-lg hover:shadow-glow transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-primary text-white rounded-lg hover:shadow-glow transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                     <>
@@ -211,7 +211,7 @@ const Contact = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ x: 10 }}
-                    className="flex items-center gap-4 p-4 bg-muted/30 rounded-lg hover:bg-primary/10 transition-all duration-200 group"
+                    className="flex items-center gap-4 p-4 bg-muted/30 rounded-lg hover:bg-primary/10 transition-colors duration-200 group"
                   >
                     <div className="p-2 bg-primary/20 rounded-lg group-hover:bg-primary/30 transition-colors duration-200">
                       <info.icon className="w-5 h-5 text-primary" />
@@ -241,7 +241,7 @@ const Contact = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.1, y: -5 }}
-                    className="p-4 bg-primary/20 rounded-lg hover:bg-primary/30 transition-all duration-200 group"
+                    className="p-4 bg-primary/20 rounded-lg hover:bg-primary/30 transition-colors duration-200 group"
                     aria-label={social.label}
                   >
                     <social.icon className="w-6 h-6 text-primary group-hover:text-primary-glow transition-colors duration-200" />
