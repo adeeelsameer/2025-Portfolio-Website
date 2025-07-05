@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Mail, MessageCircle, Send, MapPin, Phone, Linkedin, Github, Twitter, Instagram } from "lucide-react";
 import { useState } from "react";
 
+const API_BASE = import.meta.env.VITE_API_URL as string;
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -17,7 +19,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-        const res = await fetch("https://two025-portfolio-website.onrender.com/api/send-email", {
+        const res = await fetch(`${API_BASE}/api/send-email`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
