@@ -168,16 +168,21 @@ const Contact = () => {
                 className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-primary text-white rounded-lg hover:shadow-glow transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
-                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    <>
+                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    Sending...
+                    </>
                 ) : isSent ? (
                     <>
                     <Send className="w-5 h-5" />
                     Sent!
                     </>
                 ) : (
-                  < Send className="w-5 h-5" />
+                    <>
+                    <Send className="w-5 h-5" />
+                    Send Message
+                    </>
                 )}
-                {isSubmitting ? "Sending..." : "Send Message"}
               </motion.button>
             </form>
           </motion.div>
