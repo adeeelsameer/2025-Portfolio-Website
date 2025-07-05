@@ -13,6 +13,7 @@ const Contact = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSent, setIsSent] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,10 +28,11 @@ const Contact = () => {
 
             if (res.ok) {
             setFormData({ name: "", email: "", subject: "", message: "" });
-            alert("Message sent!");
-            } else {
+            setIsSent(true);
+            setTimeout(() => setIsSent(false), 2500); // "Sent" state for 2.5 seconds
+        } else {
             alert("Failed to send message. Please try again later.");
-            }
+        }
         } catch (err) {
             alert("Error: " + (err as Error).message);
         }
@@ -160,15 +162,20 @@ const Contact = () => {
 
               <motion.button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isSubmitting || isSent}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-primary text-white rounded-lg hover:shadow-glow transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                ) : isSent ? (
+                    <>
+                    <Send className="w-5 h-5" />
+                    Sent!
+                    </>
                 ) : (
-                  <Send className="w-5 h-5" />
+                  < Send className="w-5 h-5" />
                 )}
                 {isSubmitting ? "Sending..." : "Send Message"}
               </motion.button>
