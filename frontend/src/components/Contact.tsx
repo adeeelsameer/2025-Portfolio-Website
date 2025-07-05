@@ -29,7 +29,7 @@ const Contact = () => {
             if (res.ok) {
             setFormData({ name: "", email: "", subject: "", message: "" });
             setIsSent(true);
-            setTimeout(() => setIsSent(false), 2500); // "Sent" state for 2.5 seconds
+            setTimeout(() => setIsSent(false), 10000); // "Sent" state for 10 seconds
         } else {
             alert("Failed to send message. Please try again later.");
         }
