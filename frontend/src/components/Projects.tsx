@@ -103,7 +103,7 @@ const Projects = () => {
               <div className="relative overflow-hidden">
                 <motion.img
                   src={project.image}
-                  alt={project.title}
+                  alt="Muhammad Adil Sameer"
                   className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   whileHover={{ scale: 1.1 }}
                 />
