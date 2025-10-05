@@ -9,7 +9,7 @@ const Timeline = () => {
     duration: "June 2025 - August 2025",
     location: "Palo Alto, CA, USA (Remote)",
     logo: "IV",
-    description: "Building AI-driven automations using n8n, integrating LLMs and APIs to reduce manual VC research time.",
+    description: "Built AI-driven automations using n8n, integrating LLMs and APIs to reduce manual VC research time.",
     achievements: [
         "n8n",
         "JavaScript",
@@ -25,7 +25,7 @@ const Timeline = () => {
     duration: "June 2025 - August 2025",
     location: "Markham, ON, Canada",
     logo: "RL",
-    description: "Ensuring reliable robot navigation and reported technical issues to engineering teams, helping optimize delivery routes.",
+    description: "Ensured reliable robot navigation and reported technical issues to engineering teams, helping optimize delivery routes.",
     achievements: [
         "Robotics",
         "Troubleshooting",
