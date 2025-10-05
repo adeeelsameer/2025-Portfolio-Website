@@ -5,8 +5,8 @@ const Timeline = () => {
   const experiences = [
     {
     company: "Icon Ventures",
-    role: "Software Engineering Intern",
-    duration: "June 2025 - Present",
+    role: "Software Engineer Intern",
+    duration: "June 2025 - August 2025",
     location: "Palo Alto, CA, USA (Remote)",
     logo: "IV",
     description: "Building AI-driven automations using n8n, integrating LLMs and APIs to reduce manual VC research time.",
@@ -22,7 +22,7 @@ const Timeline = () => {
     {
     company: "Real Life Robotics",
     role: "Robot Guide",
-    duration: "June 2025 - Present",
+    duration: "June 2025 - August 2025",
     location: "Markham, ON, Canada",
     logo: "RL",
     description: "Ensuring reliable robot navigation and reported technical issues to engineering teams, helping optimize delivery routes.",
@@ -35,7 +35,7 @@ const Timeline = () => {
     },
     {
     company: "Mannai Infotech",
-    role: "Software Engineering Intern",
+    role: "Software Engineer Intern",
     duration: "May 2025 - June 2025",
     location: "Doha, Qatar",
     logo: "MI",
