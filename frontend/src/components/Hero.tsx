@@ -86,7 +86,7 @@ const Hero = () => {
             View My Work
           </button>
           <a
-            href="Muhammad Adil Sameer - 2025 June.pdf"  // or your actual file name
+            href="Muhammad Adil Sameer - Resume 2025-7.pdf"
             download 
             className="px-8 py-4 bg-glass-card border border-primary/30 rounded-xl hover:bg-primary/10 transition-all duration-300">
             Download Resume
