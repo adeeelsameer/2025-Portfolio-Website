@@ -18,7 +18,7 @@ const Projects = () => {
         image: "/images/projects/flashify.png",
         tech: ["Next.js", "Material-UI", "OpenAI", "Firebase", "Clerk", "Stripe"],
         github: "https://github.com/adeeelsameer/Flashcards-App",
-        live: "https://flashcards-zeta-ten.vercel.app",
+        live: "https://flashcards-app-kappa.vercel.app/",
         featured: true
     },
     {
