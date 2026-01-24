@@ -3,6 +3,13 @@ import { ExternalLink, Github, Zap } from "lucide-react";
 
 const Projects = () => {
   const projects = [
+    {title: "CodeAncestry",
+        description: "AI-powered tool that transforms undocumented code into multi-layered explanations, preserving developer knowledge across generations.",
+        tech: ["React.js", "FastAPI", "Snowflake (Cortex)", "Gemini", "1Password"],
+        github: "https://github.com/OM200401/nwHacks-2026",
+        live: null,
+        featured: true},
+
     {
         title: "RFP Analyzer",
         description: "Automated RAG app for summarizing and searching 200+ page RFP documents. Built with React, Flask, and LangChain, leveraging OpenAI embeddings and ChromaDB for semantic search. Dockerized and deployed on GCP.",
