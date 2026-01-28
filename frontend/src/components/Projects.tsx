@@ -4,12 +4,13 @@ import { ExternalLink, Github, Zap } from "lucide-react";
 const Projects = () => {
   const projects = [
     {title: "CodeAncestry",
-        description: "AI-powered tool that transforms undocumented code into multi-layered explanations, preserving developer knowledge across generations.",
+        description: "🏆 Best Developer Tool (nwHacks 2026) - AI-powered tool that transforms undocumented code into multi-layered explanations, preserving developer knowledge across generations.",
         tech: ["React.js", "FastAPI", "Snowflake (Cortex)", "Gemini", "1Password"],
+        image: "/images/projects/codeAncestry-3.png",
         github: "https://github.com/OM200401/nwHacks-2026",
         live: null,
         featured: true},
-
+        
     {
         title: "RFP Analyzer",
         description: "Automated RAG app for summarizing and searching 200+ page RFP documents. Built with React, Flask, and LangChain, leveraging OpenAI embeddings and ChromaDB for semantic search. Dockerized and deployed on GCP.",
@@ -55,15 +56,6 @@ const Projects = () => {
         live: null,
         featured: false
     },
-    {
-        title: "Personal Portfolio",
-        description: "My personal portfolio website showcasing my projects, skills, and experience. Built with React, Express, Tailwind CSS, and Lovable featuring a responsive design and smooth animations.",
-        image: "/images/projects/personal-portfolio.png",
-        tech: ["React.js", "Express.js", "TypeScript", "Lovable", "Tailwind CSS", "UI/UX"],
-        github: "https://github.com/adeeelsameer/2025-Portfolio-Website",
-        live: null,
-        featured: false
-    }
     ];
 
 
